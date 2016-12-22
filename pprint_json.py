@@ -19,8 +19,8 @@ if __name__ == '__main__':
         print("Укажите файл с данными в качестве параметра")
         exit()
 
-    unformatted_json_string = load_data(sys.argv[1])
-    if unformatted_json_string is None:
+    data_list = load_data(sys.argv[1])
+    if data_list is None:
         print("Невозможно обработать файл")
         exit()
 
