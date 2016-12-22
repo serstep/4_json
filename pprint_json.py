@@ -4,14 +4,14 @@ import json, sys
 def load_data(filepath):
     try:
         with open(filepath) as file:
-            unformatted_json_string = json.load(file)
-        return unformatted_json_string
+            data_list = json.load(file)
+        return data_list
     except (FileNotFoundError, json.JSONDecodeError):
         return None
 
 
-def pretty_print_json(unformatted_json_string):
-    return json.dumps(unformatted_json_string, default="Ошибка обработка данных", indent=4)
+def pretty_print_json(data_list):
+    return json.dumps(data_list, default="Ошибка обработка данных", indent=4)
     
 
 if __name__ == '__main__':
